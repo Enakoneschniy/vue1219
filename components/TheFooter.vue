@@ -1,9 +1,9 @@
 <template>
   <div>
     TheFooter
-    <s-link to="/">
-      Home
-    </s-link>
+    <nuxt-link :to="{ name: 'about' }" class="nav-link" exact exact-active-class="active">
+      About
+    </nuxt-link>
   </div>
 </template>
 

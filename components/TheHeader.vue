@@ -2,9 +2,9 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <s-link to="/" class="navbar-brand">
+        <nuxt-link :to="{ name: 'home' }" class="navbar-brand" exact exact-active-class="active">
           eStore
-        </s-link>
+        </nuxt-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -19,19 +19,19 @@
         <div id="navbarNavDropdown" class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <s-link to="/">
+              <nuxt-link :to="{ name: 'home' }" class="nav-link" exact exact-active-class="active">
                 Home
-              </s-link>
+              </nuxt-link>
             </li>
             <li class="nav-item">
-              <s-link to="/catalog">
+              <nuxt-link :to="{ name: 'catalog' }" class="nav-link" exact exact-active-class="active">
                 Catalog
-              </s-link>
+              </nuxt-link>
             </li>
             <li class="nav-item">
-              <s-link to="/about">
+              <nuxt-link :to="{ name: 'about' }" class="nav-link" exact exact-active-class="active">
                 About
-              </s-link>
+              </nuxt-link>
             </li>
           </ul>
         </div>

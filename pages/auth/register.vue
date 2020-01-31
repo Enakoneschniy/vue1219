@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <h1>About Page</h1>
+    register
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'Register',
+  layout: 'empty'
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
 </style>
