@@ -28,10 +28,16 @@ export default {
   },
   methods: {
     onBuy () {
-      console.log(`Buy: ${this.product.id}`)
+      this.$emit('buy', this.product)
+      // console.log(`Buy: ${this.product.id}`)
     },
     onGoToDetail () {
-      console.log(`Go: ${this.product.id}`)
+      this.$router.push({
+        name: 'product',
+        params: {
+          id: 23
+        }
+      })
     }
   }
 }

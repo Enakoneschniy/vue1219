@@ -1,6 +1,7 @@
 <template>
   <ul class="product-list">
     <CatalogProductListItem
+      @buy="onBuy"
       :product="product"
       v-for="product of products"
       :key="product.id"
@@ -17,6 +18,11 @@ export default {
     products: {
       type: Array,
       default: () => ([])
+    }
+  },
+  methods: {
+    onBuy (product) {
+      this.$emit('buy', product)
     }
   }
 }
