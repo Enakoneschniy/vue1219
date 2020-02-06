@@ -29,13 +29,12 @@ export default {
   methods: {
     onBuy () {
       this.$emit('buy', this.product)
-      // console.log(`Buy: ${this.product.id}`)
     },
     onGoToDetail () {
       this.$router.push({
         name: 'product',
         params: {
-          id: 23
+          id: this.product.id
         }
       })
     }

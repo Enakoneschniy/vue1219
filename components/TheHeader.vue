@@ -24,11 +24,6 @@
               </nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link :to="{ name: 'catalog' }" class="nav-link" exact exact-active-class="active">
-                Catalog
-              </nuxt-link>
-            </li>
-            <li class="nav-item">
               <nuxt-link :to="{ name: 'about' }" class="nav-link" exact exact-active-class="active">
                 About
               </nuxt-link>
