@@ -1,24 +1,24 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Name Name"
-    },
-    {
-      "id": 2,
-      "name": "Name1 Name1"
+      "email": "test@test.com",
+      "password": "$2a$10$zFGpV.4CfR8ZJT2MLLZt1ORSfzXHXK41sBxFNZvCDJQhPWAav69FK",
+      "name": "Eugene Nakoneschniy",
+      "id": 1
     }
   ],
   "posts": [
     {
       "id": 1,
-      "userId": 2,
-      "title": "Test title 1"
+      "userId": 1,
+      "title": "Test title 1",
+      "description": "<strong>adsdasdas</strong><p>some text</p>"
     },
     {
       "id": 2,
       "userId": 1,
-      "title": "Test title 1"
+      "title": "Test title 2",
+      "description": "adsdasdas"
     }
   ],
   "comments": [

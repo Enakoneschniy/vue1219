@@ -15,6 +15,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    middleware: ['auth']
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -29,7 +32,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    './plugins/common.js'
+    './plugins/common.js',
+    './plugins/validate.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,7 +53,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
@@ -59,10 +64,34 @@ export default {
     host: 'localhost',
     port: 8080
   },
+  auth: {
+    redirect: {
+      login: '/login',
+      home: '/'
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/login',
+            method: 'post',
+            propertyName: 'accessToken'
+          },
+          // user: { url: '/login', method: 'get', propertyName: '' },
+          user: false,
+          logout: false
+        },
+        tokenRequired: true
+      }
+    }
+  },
   /*
   ** Build configuration
   */
   build: {
+    transpile: [
+      'vee-validate/dist/rules'
+    ],
     /*
     ** You can extend webpack config here
     */

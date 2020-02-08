@@ -29,6 +29,27 @@
               </nuxt-link>
             </li>
           </ul>
+          <ul class="navbar-nav ml-auto">
+            <template v-if="!$auth.loggedIn">
+              <li class="nav-item">
+                <nuxt-link :to="{ name: 'login' }" class="nav-link" exact exact-active-class="active">
+                  Login
+                </nuxt-link>
+              </li>
+              <li class="nav-item">
+                <nuxt-link :to="{ name: 'register' }" class="nav-link" exact exact-active-class="active">
+                  Register
+                </nuxt-link>
+              </li>
+            </template>
+            <template v-else>
+              <li class="nav-item">
+                <a @click.prevent="onLogout" href="#" class="nav-link">
+                  Logout
+                </a>
+              </li>
+            </template>
+          </ul>
         </div>
       </div>
     </nav>
@@ -37,7 +58,12 @@
 
 <script>
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  methods: {
+    async onLogout () {
+      await this.$auth.logout()
+    }
+  }
 }
 </script>
 

@@ -28,6 +28,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'Home',
+  auth: false,
   /* data: () => ({
     firstName: 'Vasya',
     lastName: 'Petrov'

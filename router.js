@@ -7,6 +7,7 @@ import User from './pages/user'
 import Post from './pages/post'
 import Profile from './pages/profile'
 import Register from './pages/auth/register'
+import Login from './pages/auth/login'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export function createRouter () {
         name: 'register',
         path: '/:lang?/register',
         component: Register
+      },
+      {
+        name: 'login',
+        path: '/:lang?/login',
+        component: Login
       },
       {
         name: 'about',
