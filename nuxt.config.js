@@ -33,7 +33,9 @@ export default {
   */
   plugins: [
     './plugins/common.js',
-    './plugins/validate.js'
+    './plugins/validate.js',
+    './plugins/toast.js',
+    './plugins/vue-js-modal.js'
   ],
   /*
   ** Nuxt.js dev-modules

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <modals-container />
+    <v-dialog />
     <TheHeader />
     <nuxt />
     <TheFooter />
