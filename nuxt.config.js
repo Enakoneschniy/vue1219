@@ -16,7 +16,7 @@ export default {
     ]
   },
   router: {
-    middleware: ['auth']
+    middleware: ['auth', 'i18n']
   },
   /*
   ** Customize the progress-bar color
@@ -35,7 +35,8 @@ export default {
     './plugins/common.js',
     './plugins/validate.js',
     './plugins/toast.js',
-    './plugins/vue-js-modal.js'
+    './plugins/vue-js-modal.js',
+    './plugins/i18n.js'
   ],
   /*
   ** Nuxt.js dev-modules

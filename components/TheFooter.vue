@@ -1,12 +1,15 @@
 <template>
   <div>
     TheFooter
+    <LangChanger />
   </div>
 </template>
 
 <script>
+import LangChanger from './LangChanger'
 export default {
-  name: 'TheFooter'
+  name: 'TheFooter',
+  components: { LangChanger }
 }
 </script>
 

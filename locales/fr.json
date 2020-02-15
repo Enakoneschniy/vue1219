@@ -1,0 +1,9 @@
+{
+  "nav":{
+    "home": "Accueil",
+    "about": "à propos de nous"
+  },
+  "modals": {
+    "hello": "Bonjour de modal"
+  }
+}

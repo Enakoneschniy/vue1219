@@ -64,10 +64,26 @@ export default {
       return error(e)
     }
   },
+  created () {
+    // this.onSaveName('Hello World!!!!')
+    this.$eventBus.$on('save-name', this.onSaveName)
+  },
   methods: {
+    onSaveName (name) {
+      window.alert(name)
+      /* this.$modal.show('dialog', {
+        title: 'Alert!',
+        text: name,
+        buttons: [
+          {
+            title: 'Close'
+          }
+        ]
+      }) */
+    },
     onShowModal () {
       this.$modal.show(MyFirstModal, {
-        message: 'Hello from Modal'
+        message: this.$t('modals.hello')
       })
     },
     saveData () {

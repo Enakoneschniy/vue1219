@@ -20,16 +20,17 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <nuxt-link :to="{ name: 'home' }" class="nav-link" exact exact-active-class="active">
-                Home
+                {{ $t('nav.home') }}
               </nuxt-link>
             </li>
             <li class="nav-item">
               <nuxt-link :to="{ name: 'about' }" class="nav-link" exact exact-active-class="active">
-                About
+                {{ $t('nav.about') }}
               </nuxt-link>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
+            <LangChanger />
             <template v-if="!$auth.loggedIn">
               <li class="nav-item">
                 <nuxt-link :to="{ name: 'login' }" class="nav-link" exact exact-active-class="active">
@@ -57,8 +58,10 @@
 </template>
 
 <script>
+import LangChanger from './LangChanger'
 export default {
   name: 'TheHeader',
+  components: { LangChanger },
   methods: {
     async onLogout () {
       await this.$auth.logout()
